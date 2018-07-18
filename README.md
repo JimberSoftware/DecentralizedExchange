@@ -18,10 +18,10 @@ For integration with Jumpscale these are the requirements:
 - Following functionality should also be provided by the 0-robot templates:
   - recover <seeds>
   - seeds: Return JSON object with: {seeds: seeds}
-  (- syncstatus Return JSON object with: {sync: percentageValue})
+  - (syncstatus Return JSON object with: {sync: percentageValue})
   - balance 	Return JSON object with: {balance: value}
   - address: Return JSON object with: 	{address: address}
-  (- confirmations <tx_id> Return JSON object with: {tx:{ txFound: bool confirmations: int }})
+  - (confirmations <tx_id> Return JSON object with: {tx:{ txFound: bool confirmations: int }})
 
 ### Priority two
  - AtomicExchange UI should also be useable/deployable in Jumpscale
