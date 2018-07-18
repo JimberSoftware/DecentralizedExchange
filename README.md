@@ -1,6 +1,11 @@
 # Atomic Exchange version 1
 
-Starting with version 1, the Atomic Exchange will be useable by all users like any other exchange. This version will include full Jumpscale integration, light wallets and a global orderbook.
+Starting with version 1, the Atomic Exchange will be useable by all users like any other exchange. This version will include full Jumpscale integration, light wallets and a global orderbook. 
+
+
+After IYO login, users will first create their own container. There will be a mastercontainer that is able to create usercontainers, the usercontainers will contain all the dependencies to do atomic swaps in a decentralized way.
+
+ ![architecture](./AtomicExchange-mastercontainer.png)
 
 ## Jumpscale
 
@@ -24,7 +29,7 @@ For integration with Jumpscale these are the requirements:
   - (confirmations <tx_id> Return JSON object with: {tx:{ txFound: bool confirmations: int }})
 
 ### Priority two
- - AtomicExchange UI should also be useable/deployable in Jumpscale
+ - AtomicExchange UI + mastercontainer should also be useable/deployable in Jumpscale
  
 ### Architecture
  ![architecture](./AtomicExchange-arch.png)
@@ -43,6 +48,8 @@ The REST api will be built using Python and will contain following endpoints:
 
 - Mastercontainer endpoints:
   - GET /container: GETs existing or new container for the user
+  
+- Usercontainer endpoints:
   - GET /{cur}/balance: GETs balance for a specific currency
   - GET /{cur}/address: GETs a new address for the wallet
   - GET /{cur}/wallet: GETs key + url for download of wallet backup
