@@ -6,5 +6,5 @@
 
 ## run
 
-py exchange.py or
-py cointainer.py
+python exchange.py or
+python cointainer.py
