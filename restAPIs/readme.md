@@ -1,9 +1,8 @@
 ## install
 
-install python
+- install python
+- pip install flask-restful
 
-pip install flask-restful
-python 2.6 +
 
 ## run
 
