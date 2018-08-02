@@ -1,7 +1,11 @@
+##install
+
+install python
+
 pip install flask-restful
 python 2.6 +
 
-# run
+## run
 
 py exchange.py or
 py cointainer.py
