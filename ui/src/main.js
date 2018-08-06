@@ -7,16 +7,24 @@ import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.min.css'
 import MyWallet from './components/Application/MyWallet.vue'
 import NewOrder from './components/Application/NewOrder.vue'
-import OrderHistory from './components/Application/OrderHistory.vue'
+import Orders from './components/Application/Orders.vue'
 import { store } from './store'
 
-Vue.use(Vuetify)
+Vue.use(Vuetify, {
+  theme: {
+    primary: '#0d2e75',
+    secondary: '#f2f6ff',
+    accent: '#00e385',
+    error: '#b71c1c'
+  }
+})
 
 Vue.config.productionTip = false
 
+Vue.component('app', App)
 Vue.component('my-wallet', MyWallet)
 Vue.component('new-order', NewOrder)
-Vue.component('order-history', OrderHistory)
+Vue.component('orders', Orders)
 
 /* eslint-disable no-new */
 new Vue({

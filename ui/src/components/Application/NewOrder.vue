@@ -4,7 +4,7 @@
         <v-card-title>
             <h2>New order</h2>
         </v-card-title>
-        <v-card-actions class="ma-2">
+        <v-card-actions class="ma-3">
             <v-form ref="form" v-model="valid" lazy-validation @submit.prevent="onSubmit">        
                 <v-layout row wrap>
                     <v-flex xs7>
@@ -52,7 +52,7 @@
                         ></v-select>
                     </v-flex>             
                 </v-layout>   
-                <v-layout>
+                <v-layout class="ma-2">
                   <v-btn
                   :disabled=!valid
                   @click="onSubmit"

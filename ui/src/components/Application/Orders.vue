@@ -2,7 +2,7 @@
 <div>    
   <v-card>
     <v-card-title>
-      <h2>Order history</h2>
+      <h2>{{title}}</h2>
       <v-spacer></v-spacer>
       <v-text-field
         v-model="search"
@@ -35,10 +35,9 @@
 
 <script>
   export default {
-    computed: {
-      orders () {
-        return this.$store.getters.loadedOrders
-      }
+    props: {
+      title: String,
+      orders: Array
     },
     data () {
       return {
