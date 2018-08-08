@@ -99,6 +99,5 @@ export const store = new Vuex.Store({
         return orderA.date > orderB.date
       })
     }
-
   }
 })

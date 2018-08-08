@@ -2,23 +2,23 @@
   <v-container>
     <v-layout>
       <v-flex xs12 sm6 offset-sm3 >
-
-
-      <v-alert class="mb-3"
-        :value="true"
-        color="info"
-        icon="info"
-        outline
-      >
-        No wallet found.
-      </v-alert>
+        <v-alert class="mb-3"
+          :value="true"
+          color="info"
+          icon="info"
+          outline
+        >
+          No wallet found.
+        </v-alert>
 
         <v-card >
+              <v-layout>
+      <v-flex xs12 sm6 offset-sm3 >
           <v-card-title>
             <h2>Upload your existing wallet</h2>
           </v-card-title>
-          <div id="app">
-            
+          
+          <div id="app">            
             <file-pond
                 name="test"
                 ref="pond"
@@ -30,21 +30,16 @@
                 v-bind:files="myFiles"
                 v-on:init="handleFilePondInit"/>
           </div>
-        </v-card>
-        <h2 class="text-xs-center ma-5">Or</h2>
-         <v-card >
           <v-card-title>
-            <h2>Create a new wallet</h2>
+            <h2>Or create a new wallet</h2>
           </v-card-title>
-            <v-card-actions>
-                  <v-layout class="ma-3">
-                    <v-flex xs12 sm6 offset-md4 >
-                      <v-btn dark class="primary text-xs-center">
-                        <v-icon  left>add_circle_outline</v-icon>Create new wallet
-                        </v-btn>
-                      </v-flex>
-                  </v-layout>            
-            </v-card-actions>
+                  <div class="text-xs-center ma-3">
+                    <v-btn dark class="primary">
+                      <v-icon  left>add_circle_outline</v-icon>Create new wallet
+                    </v-btn>
+                  </div>
+          </v-flex>
+              </v-layout>
           </v-card >
       </v-flex>
     </v-layout>

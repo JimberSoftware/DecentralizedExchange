@@ -12,7 +12,7 @@
         hide-details
       ></v-text-field>
     </v-card-title>
-    <v-data-table
+    <v-data-table class="ma-2"
       :headers="headers"
       :items="orders"
       :search="search"
